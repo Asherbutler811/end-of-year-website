@@ -1,22 +1,15 @@
-/* A simple css reset */
-body,
-html {
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* The Font Family- Really important!! */
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
-img {
-    width: 100%;
-}
-
-/* The hero section styling- use your OWN Hero Image URL here */
+/* Hero Section Styling */
 .hero {
-    background-image: url('images/techquitybanner-1130x160.png');
+    background-image: url('images/hero-image.jpg'); /* Replace with your banner image */
     height: 25vh;
     background-size: cover;
     background-position: center;
@@ -25,56 +18,185 @@ img {
     align-items: center;
     color: white;
     text-align: center;
-    position: relative;
 }
 
-/* BIG text styling for the hero section text */
 .hero-text {
     font-size: 4em;
     font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* nice big font on a banner style background */
-.topic-title{
-    color: white;
-    font-size: 2em;
-    padding: 0.1em 3em;
-    background-color: rgb(71, 71, 71);
-}
-
-/* Three column grid with a nice big gap */
-.topic-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
-    /* bring the whole section in off the sides of the page */
-    width: 70%;
-    /* top margin of 3em and center right/left */
-    margin: 3em auto;
-}
-
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
-    background-color: rgb(71, 71, 71);
+/* Section Titles */
+.section-title {
+    background-color: #4b4b4b;
     color: white;
     padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for the topic card titles */
-.topic-card-text{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    /* center align text */
     text-align: center;
 }
 
+/* Family History Section Styling */
+.family-history {
+    padding: 2em 10%;
+    background-color: #f9f9f9;
+}
 
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
-    background-color: rgb(71, 71, 71);
+.family-history p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Butler Family History Boxes */
+.history-boxes {
+    background-color: #eaeaea;
+    padding: 3em 10%;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.history-box {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.history-box h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.history-box p {
+    color: #555;
+    font-size: 1.1em;
+    margin-top: 1em;
+    line-height: 1.6;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+  }
+  
+  /* Family Tree Section */
+  .family-tree {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .family-tree h1 {
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    letter-spacing: 3px;
+  }
+  
+  /* Container for whole tree */
+  .tree-container {
+    position: relative;
+  }
+  
+  /* Each generation container */
+  .generation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Person boxes */
+  .person {
+    border: 2px solid black;
+    padding: 0.8em 1.2em;
+    min-width: 120px;
+    font-weight: 600;
+    font-size: 0.9em;
+    background-color: white;
+    position: relative;
+  }
+  
+  /* Highlight “Me” */
+  .person.highlight {
+    font-weight: 900;
+    background-color: #eee;
+  }
+  
+  /* Vertical connector lines between generations */
+  .connector-line {
+    width: 2px;
+    background-color: black;
+    margin: 0 auto 1.5em auto;
+  }
+  
+  /* Heights for each connector line */
+  .vertical-5 {
+    height: 60px;
+  }
+  
+  .vertical-4 {
+    height: 50px;
+  }
+  
+  .vertical-3 {
+    height: 50px;
+  }
+  
+  .vertical-2 {
+    height: 40px;
+  }
+  
+  /* Remove all horizontal connector lines inside boxes */
+  /* (Commented out or deleted):
+  .generation-5 .person:nth-child(odd)::after { ... }
+  .generation-5 .person:nth-child(even)::before { ... }
+  .generation-4 .person:nth-child(odd)::after { ... }
+  .generation-4 .person:nth-child(even)::before { ... }
+  .generation-3 .person:nth-child(odd)::after { ... }
+  .generation-3 .person:nth-child(even)::before { ... }
+  .generation-2 .person:first-child::after { ... }
+  .generation-2 .person:last-child::before { ... }
+  */
+  
+  /* Clear lines on last and first child (no longer needed) */
+  .person:last-child::after {
+    display: none;
+  }
+  
+  .person:first-child::before {
+    display: none;
+  }
+  
+  
+  
+
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: #4b4b4b;
     color: white;
-    text-align: right;
-    padding: 3em 3em;
+    text-align: center;
+    padding: 2em 0;
 }
