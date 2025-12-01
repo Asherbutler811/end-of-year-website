@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, sans-serif;
   box-sizing: border-box;
 }
 
@@ -180,12 +180,12 @@ body {
 /* PDF Display */
 .dna-pdf {
   flex: 1;
-  min-width: 300px;
+  min-width: 360px;
 }
 
 .dna-pdf embed {
   width: 100%;
-  height: 600px;
+  height: 579px;
   border: 2px solid #586994;
   border-radius: 8px;
 }
@@ -222,8 +222,8 @@ body {
 .footer {
   background-color: #404E7C;
   color: white;
-  text-align: right;
-  padding: 3em 3em;
+  text-align: middle;
+  padding: 0.4em 0.4em;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -232,7 +232,7 @@ body {
 
 /* Footer Images */
 .footer-images img {
-  width: 65px;
+  width: 135px;
   height: auto;
   margin: 0 10px;
   vertical-align: middle;
